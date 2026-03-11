@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Haven Cottages | Pocket Neighborhood in South Salem, Oregon</title>
+    <meta name="description" content="South Haven Cottages offers 11 thoughtfully designed 2-story cottages in a pocket neighborhood in South Salem, Oregon. Join our waitlist for community-centered living inspired by Ross Chapin.">
+    <meta name="keywords" content="pocket neighborhood, South Salem Oregon, cottages for rent, Ross Chapin, community living, Salem Oregon housing, cottage rentals">
+    <meta name="author" content="South Haven Cottages">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="South Haven Cottages | Pocket Neighborhood in South Salem">
+    <meta property="og:description" content="11 thoughtfully designed 2-story cottages in a pocket neighborhood. Community-centered living in South Salem, Oregon.">
+    <meta property="og:image" content="south-haven-cottages-sunset-salem-oregon.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="South Haven Cottages | Pocket Neighborhood">
+    <meta name="twitter:description" content="11 thoughtfully designed cottages in South Salem, Oregon. Join the waitlist!">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "South Haven Cottages",
+      "description": "A pocket neighborhood of 11 thoughtfully designed 2-story cottages in South Salem, Oregon",
+      "url": "https://southhavencottages.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "South Salem",
+        "addressRegion": "OR",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "44.9",
+        "longitude": "-123.0"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --urban-bronze: #57504A;
+            --naval: #34405C;
+            --gothic-green: #4A5645;
+            --bronze-light: #7A726A;
+            --cream: #FAF8F5;
+            --warm-white: #FFFEFA;
+            --charcoal: #2C2C2C;
+            --gold-accent: #C4A35A;
+            --gold-dark: #A8893D;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Source Sans Pro', sans-serif; background-color: var(--cream); color: var(--charcoal); line-height: 1.7; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
+
+        nav { position: fixed; top: 0; width: 100%; background: rgba(250, 248, 245, 0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 0.75rem 2rem; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo-icon { width: 45px; height: 45px; }
+        .logo-text { display: flex; flex-direction: column; }
+        .logo-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--naval); line-height: 1.1; }
+        .logo-tagline { font-size: 0.7rem; color: var(--gothic-green); text-transform: uppercase; letter-spacing: 2px; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--charcoal); font-weight: 400; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--gold-accent); }
+        .mobile-menu { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+        .mobile-menu span { width: 25px; height: 2px; background: var(--charcoal); }
+
+        .parallax-hero { position: relative; height: 100vh; min-height: 600px; overflow: hidden; }
+        .parallax-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.5s ease-in-out; background-size: cover; background-position: center; }
+        .parallax-slide.active { opacity: 1; }
+        .parallax-slide::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(52, 64, 92, 0.3) 0%, rgba(74, 86, 69, 0.4) 100%); }
+        .video-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.5s ease-in-out; overflow: hidden; }
+        .video-slide.active { opacity: 1; }
+        .video-slide video { width: 100%; height: 100%; object-fit: cover; }
+        .video-slide::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(52, 64, 92, 0.3) 0%, rgba(74, 86, 69, 0.4) 100%); z-index: 1; pointer-events: none; }
+
+        .hero-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 10; max-width: 900px; padding: 2rem; }
+        .hero-logo { width: 100px; height: 100px; margin: 0 auto 1.5rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); }
+        .hero-content h1 { font-size: clamp(2.5rem, 6vw, 4rem); color: white; margin-bottom: 1rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.3); }
+        .hero-content .tagline { font-size: 1.3rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem; font-weight: 300; }
+        .hero-content .subtitle { font-size: 1rem; color: rgba(255,255,255,0.85); margin-bottom: 2rem; }
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        .slide-indicators { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 20; }
+        .slide-indicator { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: all 0.3s; }
+        .slide-indicator.active { background: var(--gold-accent); transform: scale(1.2); }
+
+        .btn { padding: 1rem 2.5rem; border: none; border-radius: 50px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-decoration: none; }
+        .btn-primary { background: var(--gold-accent); color: white; }
+        .btn-primary:hover { background: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(196, 163, 90, 0.3); }
+        .btn-secondary { background: transparent; color: white; border: 2px solid white; }
+        .btn-secondary:hover { background: white; color: var(--naval); }
+
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header h2 { font-size: 2.5rem; color: var(--naval); margin-bottom: 1rem; }
+        .section-header p { font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto; }
+
+        .about { background: var(--warm-white); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-image { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+        .about-image img { width: 100%; height: 400px; object-fit: cover; }
+        .about-video { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+        .about-video video { width: 100%; height: 400px; object-fit: cover; display: block; }
+        .about-content h3 { font-size: 2rem; color: var(--charcoal); margin-bottom: 1.5rem; }
+        .about-content p { margin-bottom: 1.5rem; color: #555; }
+        .feature-list { list-style: none; margin-top: 1.5rem; }
+        .feature-list li { padding: 0.5rem 0; padding-left: 2rem; position: relative; }
+        .feature-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold-accent); font-weight: bold; }
+
+        .location { background: var(--cream); }
+        .location-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .location-card { background: white; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .location-card:hover { transform: translateY(-5px); }
+        .location-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--gothic-green) 0%, var(--naval) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; }
+        .location-icon svg { width: 30px; height: 30px; fill: white; }
+        .location-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--charcoal); }
+        .location-card .time { font-size: 1.8rem; font-weight: 700; color: var(--gold-accent); margin-bottom: 0.5rem; }
+        .location-card p { color: #666; font-size: 0.95rem; }
+
+        .parallax-divider { height: 350px; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; }
+        .parallax-divider::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(52, 64, 92, 0.4); }
+        .parallax-divider-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; }
+        .parallax-divider-content h2 { font-size: 2.5rem; margin-bottom: 1rem; color: white; }
+
+        .cottages { background: var(--warm-white); }
+        .color-palette { text-align: center; margin-bottom: 3rem; padding: 2rem; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+        .color-palette h3 { font-size: 1.5rem; color: var(--charcoal); margin-bottom: 0.5rem; }
+        .color-palette > p { color: #666; margin-bottom: 1.5rem; }
+        .color-swatches { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .color-swatch { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+        .swatch-color { width: 80px; height: 80px; border-radius: 50%; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s; }
+        .swatch-color:hover { transform: scale(1.1); }
+        .swatch-name { font-weight: 600; color: var(--charcoal); font-size: 0.9rem; }
+        .swatch-code { font-size: 0.8rem; color: #888; }
+
+        .cottage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .cottage-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .cottage-card:hover { transform: translateY(-5px); }
+        .cottage-image { height: 220px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1rem; background-size: cover; background-position: center; position: relative; }
+        .cottage-image::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.3); }
+        .cottage-image span { position: relative; z-index: 1; font-weight: 600; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+        .cottage-info { padding: 1.5rem; }
+        .cottage-info h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--charcoal); }
+        .cottage-price { margin-bottom: 0.75rem; }
+        .cottage-price .price-amount { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--gothic-green); }
+        .cottage-price .price-period { font-size: 1rem; color: #666; font-weight: 400; }
+        .cottage-info p { color: #666; margin-bottom: 1rem; font-size: 0.95rem; }
+        .cottage-features { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+        .cottage-feature { background: var(--cream); padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.85rem; color: var(--naval); }
+
+        .inspiration { background: linear-gradient(135deg, var(--naval) 0%, var(--gothic-green) 100%); color: white; }
+        .inspiration .section-header h2 { color: white; }
+        .inspiration .section-header p { color: rgba(255,255,255,0.85); }
+        .inspiration-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .inspiration-text h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+        .inspiration-text p { margin-bottom: 1rem; opacity: 0.9; }
+        .inspiration-quote { background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 15px; border-left: 4px solid var(--gold-accent); }
+        .inspiration-quote p { font-style: italic; font-size: 1.1rem; margin-bottom: 0.75rem; }
+        .inspiration-quote cite { font-style: normal; opacity: 0.8; }
+
+        .waitlist { background: var(--cream); }
+        .waitlist-container { max-width: 550px; margin: 0 auto; background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
+        .waitlist-container h2 { text-align: center; color: var(--naval); margin-bottom: 0.5rem; }
+        .waitlist-container .subtitle { text-align: center; color: #666; margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 600; color: var(--charcoal); font-size: 0.95rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.9rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; font-family: inherit; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--naval); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-submit { width: 100%; margin-top: 0.5rem; }
+        .form-note { text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #888; }
+
+        footer { background: var(--charcoal); color: white; padding: 3rem 2rem 1.5rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+        .footer-logo { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .footer-logo svg { width: 35px; height: 35px; }
+        .footer-logo span { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: var(--gold-accent); }
+        .footer-brand p { opacity: 0.7; line-height: 1.7; font-size: 0.95rem; }
+        .footer-links h4 { margin-bottom: 1rem; color: var(--gold-accent); font-size: 1rem; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.5rem; }
+        .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s; font-size: 0.95rem; }
+        .footer-links a:hover { color: white; }
+        .footer-bottom { max-width: 1200px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; opacity: 0.6; font-size: 0.85rem; }
+
+        .success-message { display: none; text-align: center; padding: 2rem; }
+        .success-message.show { display: block; }
+        .success-message svg { width: 70px; height: 70px; fill: var(--gothic-green); margin-bottom: 1rem; }
+        .success-message h3 { color: var(--gothic-green); margin-bottom: 0.5rem; }
+
+        @media (max-width: 968px) {
+            .about-grid, .inspiration-content { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-content { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+            .parallax-slide, .parallax-divider { background-attachment: scroll; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); flex-direction: column; padding: 1rem 2rem; gap: 1rem; }
+            .nav-links.active { display: flex; }
+            .mobile-menu { display: flex; }
+            .form-row { grid-template-columns: 1fr; }
+            .cottage-grid { grid-template-columns: 1fr; }
+            section { padding: 3rem 1.5rem; }
+            .logo-tagline { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="48" fill="#34405C"/>
+                    <path d="M50 20L20 45V80H40V60H60V80H80V45L50 20Z" fill="#FAF8F5"/>
+                    <path d="M35 35L50 23L65 35" stroke="#C4A35A" stroke-width="3" fill="none"/>
+                    <rect x="45" y="50" width="10" height="15" fill="#4A5645"/>
+                    <circle cx="30" cy="75" r="8" fill="#4A5645" opacity="0.6"/>
+                    <circle cx="70" cy="75" r="8" fill="#4A5645" opacity="0.6"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-name">South Haven Cottages</span>
+                    <span class="logo-tagline">A Pocket Neighborhood</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#cottages">Cottages</a></li>
+                <li><a href="#waitlist">Join Waitlist</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="parallax-hero">
+        <div class="parallax-slide active" style="background-image: url('south-haven-cottages-sunset-salem-oregon.png');" role="img" aria-label="South Haven Cottages sunset view rendering in South Salem Oregon - pocket neighborhood community"></div>
+
+        <div class="hero-content">
+            <svg class="hero-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="48" fill="rgba(255,255,255,0.95)"/>
+                <path d="M50 20L20 45V80H40V60H60V80H80V45L50 20Z" fill="#34405C"/>
+                <path d="M35 35L50 23L65 35" stroke="#C4A35A" stroke-width="3" fill="none"/>
+                <rect x="45" y="50" width="10" height="15" fill="#4A5645"/>
+                <circle cx="30" cy="75" r="8" fill="#4A5645" opacity="0.6"/>
+                <circle cx="70" cy="75" r="8" fill="#4A5645" opacity="0.6"/>
+            </svg>
+            <h1>South Haven Cottages</h1>
+            <p class="tagline">A Pocket Neighborhood of 11 Thoughtfully Designed Cottages</p>
+            <p class="subtitle">South Salem, Oregon • Inspired by Ross Chapin's vision</p>
+            <div class="hero-buttons">
+                <a href="#waitlist" class="btn btn-primary">Join the Waitlist</a>
+                <a href="#cottages" class="btn btn-secondary">Explore Cottages</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>Welcome to Pocket Neighborhood Living</h3>
+                    <p>South Haven Cottages brings the beloved pocket neighborhood concept to Oregon's Willamette Valley. Our community of 11 charming 2-story cottages is designed to foster genuine connections while honoring your need for privacy.</p>
+                    <p>Drawing inspiration from architect Ross Chapin's groundbreaking work, each cottage faces a shared commons—a welcoming green space where neighbors naturally gather.</p>
+                    <ul class="feature-list">
+                        <li>11 thoughtfully designed 2-story cottages</li>
+                        <li>Shared commons and garden spaces</li>
+                        <li>Private porches and outdoor areas</li>
+                        <li>Walkable, car-free interior pathways</li>
+                        <li>Sustainable, energy-efficient design</li>
+                    </ul>
+                </div>
+                <div class="about-video">
+                    <video autoplay muted loop playsinline aria-label="Aerial tour video of South Haven Cottages pocket neighborhood in Salem Oregon">
+                        <source src="south-haven-cottages-aerial-tour-salem-oregon.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location" id="location">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Perfectly Positioned</h2>
+                <p>Enjoy cottage living with urban conveniences minutes away</p>
+            </div>
+            <div class="location-cards">
+                <div class="location-card">
+                    <div class="location-icon"><svg viewBox="0 0 24 24"><path d="M15 11V5l-3-3-3 3v2H3v14h18V11h-6zm-8 8H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm6 12h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg></div>
+                    <h3>Downtown Salem</h3>
+                    <div class="time">8 min</div>
+                    <p>Restaurants, shops, arts & culture</p>
+                </div>
+                <div class="location-card">
+                    <div class="location-icon"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg></div>
+                    <h3>Grocery Shopping</h3>
+                    <div class="time">8 min</div>
+                    <p>Roth's, Fred Meyer & more</p>
+                </div>
+                <div class="location-card">
+                    <div class="location-icon"><svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg></div>
+                    <h3>Minto-Brown Park</h3>
+                    <div class="time">1 min</div>
+                    <p>900+ acres of trails & nature</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax-divider" style="background-image: url('south-haven-pocket-neighborhood-aerial-view-salem.png');" role="img" aria-label="Aerial view of South Haven pocket neighborhood showing green bronze and blue cottages in Salem Oregon">
+        <div class="parallax-divider-content">
+            <h2>Your Haven Awaits</h2>
+        </div>
+    </div>
+
+    <section class="cottages" id="cottages">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>The Cottages</h2>
+                <p>Each cottage maximizes natural light, functional space, and connection to the outdoors</p>
+            </div>
+
+            <div class="color-palette">
+                <h3>Exterior Color Palette</h3>
+                <p>Curated Sherwin Williams colors</p>
+                <div class="color-swatches">
+                    <div class="color-swatch"><div class="swatch-color" style="background: #57504A;"></div><span class="swatch-name">Urban Bronze</span><span class="swatch-code">SW 7048</span></div>
+                    <div class="color-swatch"><div class="swatch-color" style="background: #34405C;"></div><span class="swatch-name">Naval</span><span class="swatch-code">SW 6244</span></div>
+                    <div class="color-swatch"><div class="swatch-color" style="background: #4A5645;"></div><span class="swatch-name">Rookwood Dark Green</span><span class="swatch-code">SW 2816</span></div>
+                </div>
+            </div>
+
+            <div class="cottage-grid">
+                <div class="cottage-card">
+                    <div class="cottage-image" style="background-image: url('south-haven-cottage-plan-a-exterior-salem-oregon.png');" role="img" aria-label="South Haven Cottage Plan A exterior rendering 734 sq ft two-story home Salem Oregon"><span>Plan A Cottage</span></div>
+                    <div class="cottage-info">
+                        <h3>Cottage Plan A</h3>
+                        <div class="cottage-price"><span class="price-amount">$1,775</span><span class="price-period">/month</span></div>
+                        <p>Thoughtfully designed 2-story cottage with vaulted living room ceiling. Features 2 bedrooms and 1 bathroom with a stand-up shower.</p>
+                        <div class="cottage-features">
+                            <span class="cottage-feature">734 sq ft total</span>
+                            <span class="cottage-feature">518 sq ft main</span>
+                            <span class="cottage-feature">216 sq ft upper</span>
+                            <span class="cottage-feature">2 Bed / 1 Bath</span>
+                        </div>
+                        <div class="floor-plan-preview">
+                            <img src="south-haven-cottage-plan-a-3d-floor-plan-main-floor.png" alt="South Haven Cottage Plan A 3D floor plan showing main floor layout with living room kitchen bathroom and stairs to upper level" style="width: 100%; border-radius: 10px; margin-top: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 0.5rem;">Main Floor Layout</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cottage-card">
+                    <div class="cottage-image" style="background-image: url('south-haven-cottage-plan-b-exterior-salem-oregon.jpg');" role="img" aria-label="South Haven Cottage Plan B exterior rendering 815 sq ft two-story home Salem Oregon"><span>Plan B Cottage</span></div>
+                    <div class="cottage-info">
+                        <h3>Cottage Plan B</h3>
+                        <div class="cottage-price"><span class="price-amount">$1,895</span><span class="price-period">/month</span></div>
+                        <p>Larger 2-story layout with vaulted living room. 2 bedrooms and 1 bathroom - ideal for a home office or guest space.</p>
+                        <div class="cottage-features">
+                            <span class="cottage-feature">815 sq ft total</span>
+                            <span class="cottage-feature">604 sq ft main</span>
+                            <span class="cottage-feature">211 sq ft upper</span>
+                            <span class="cottage-feature">2 Bed / 1 Bath</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cottage-card">
+                    <div class="cottage-image" style="background-image: url('south-haven-pocket-neighborhood-aerial-view-salem.png');" role="img" aria-label="South Haven Cottages community commons aerial view shared green space Salem Oregon"><span>Community Commons</span></div>
+                    <div class="cottage-info">
+                        <h3>Shared Amenities</h3>
+                        <p>The heart of our pocket neighborhood—shared green spaces, walking paths, and gathering areas.</p>
+                        <div class="cottage-features">
+                            <span class="cottage-feature">Central Commons</span>
+                            <span class="cottage-feature">Gardens</span>
+                            <span class="cottage-feature">Walking Paths</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="inspiration">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Inspired Design</h2>
+                <p>Following the principles that make pocket neighborhoods thrive</p>
+            </div>
+            <div class="inspiration-content">
+                <div class="inspiration-text">
+                    <h3>The Ross Chapin Philosophy</h3>
+                    <p>Ross Chapin's pocket neighborhoods have transformed how we think about community housing. By placing homes around shared green spaces, these neighborhoods naturally encourage neighborly interaction.</p>
+                    <p>At South Haven, front porches face the commons, parking is kept to the periphery, and every design decision asks "does this build community?"</p>
+                </div>
+                <div class="inspiration-quote">
+                    <p>"A pocket neighborhood is a cohesive cluster of homes gathered around shared commons. The magic lies in how homes relate to one another."</p>
+                    <cite>— The Pocket Neighborhood Philosophy</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="waitlist" id="waitlist">
+        <div class="section-container">
+            <div class="waitlist-container">
+                <div id="waitlist-form-container">
+                    <h2>Join Our Waitlist</h2>
+                    <p class="subtitle">Be among the first to learn about availability</p>
+                    <form id="waitlist-form" onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group"><label for="firstName">First Name *</label><input type="text" id="firstName" name="firstName" required></div>
+                            <div class="form-group"><label for="lastName">Last Name *</label><input type="text" id="lastName" name="lastName" required></div>
+                        </div>
+                        <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" name="email" required></div>
+                        <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone"></div>
+                        <div class="form-group"><label for="cottage-type">Preferred Cottage Plan</label><select id="cottage-type" name="cottageType"><option value="">Select an option</option><option value="plan-a">Plan A (734 sq ft)</option><option value="plan-b">Plan B (815 sq ft)</option><option value="either">Either / Flexible</option></select></div>
+                        <div class="form-group"><label for="timeline">When are you looking to move?</label><select id="timeline" name="timeline"><option value="">Select an option</option><option value="asap">As soon as possible</option><option value="1-3months">1-3 months</option><option value="3-6months">3-6 months</option><option value="6-12months">6-12 months</option><option value="justlooking">Just exploring options</option></select></div>
+                        <div class="form-group"><label for="message">Tell us about yourself (optional)</label><textarea id="message" name="message" rows="3" placeholder="What draws you to pocket neighborhood living?"></textarea></div>
+                        <button type="submit" class="btn btn-primary form-submit">Join the Waitlist</button>
+                    </form>
+                    <p class="form-note">We respect your privacy. Your information will only be used to contact you about availability.</p>
+                </div>
+                <div id="success-message" class="success-message">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <h3>You're on the list!</h3>
+                    <p>Thank you for your interest in South Haven Cottages. We'll be in touch soon!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="48" fill="#34405C"/><path d="M50 20L20 45V80H40V60H60V80H80V45L50 20Z" fill="#FAF8F5"/><path d="M35 35L50 23L65 35" stroke="#C4A35A" stroke-width="3" fill="none"/></svg>
+                    <span>South Haven Cottages</span>
+                </div>
+                <p>A pocket neighborhood of 11 cottages in beautiful South Salem, Oregon. Inspired by Ross Chapin's vision of community-centered living.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul><li><a href="#about">About</a></li><li><a href="#location">Location</a></li><li><a href="#cottages">Cottages</a></li><li><a href="#waitlist">Join Waitlist</a></li></ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul><li><a href="mailto:info@southhavencottages.com">info@southhavencottages.com</a></li><li>South Salem, Oregon</li></ul>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 South Haven Cottages. All rights reserved.</p></div>
+    </footer>
+
+    <script>
+        function toggleMenu() { document.querySelector('.nav-links').classList.toggle('active'); }
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            document.getElementById('waitlist-form-container').querySelector('form').style.display = 'none';
+            document.getElementById('waitlist-form-container').querySelector('h2').style.display = 'none';
+            document.getElementById('waitlist-form-container').querySelector('.subtitle').style.display = 'none';
+            document.getElementById('waitlist-form-container').querySelector('.form-note').style.display = 'none';
+            document.getElementById('success-message').classList.add('show');
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
