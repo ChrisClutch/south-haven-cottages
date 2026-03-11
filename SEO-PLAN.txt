@@ -1,0 +1,182 @@
+SOUTH HAVEN COTTAGES - SEO OPTIMIZATION PLAN
+=============================================
+Goal: Rank #1 for "pocket neighborhood Salem Oregon" and related terms
+
+=============================================================================
+PHASE 1: TECHNICAL SEO (DONE)
+=============================================================================
+[X] Title tag optimized (under 60 chars, keyword-rich)
+[X] Meta description (under 160 chars, compelling CTA)
+[X] Open Graph tags for social sharing
+[X] Twitter Card meta tags
+[X] Schema.org structured data (LocalBusiness)
+[X] Mobile-responsive design
+[X] Fast loading (single HTML file, optimized)
+
+STILL NEEDED:
+[ ] Add sitemap.xml
+[ ] Add robots.txt
+[ ] Set up Google Search Console
+[ ] Set up Google Analytics 4
+[ ] Add canonical URL tags
+[ ] Compress images (WebP format)
+
+=============================================================================
+PHASE 2: LOCAL SEO (CRITICAL FOR RENTALS)
+=============================================================================
+[ ] Google Business Profile - CREATE IMMEDIATELY
+    - Add photos, hours, description
+    - Get reviews from early interest list
+    - Post updates weekly
+
+[ ] Local Citations - Get listed on:
+    - Yelp
+    - Apartments.com
+    - Zillow
+    - Trulia
+    - HotPads
+    - Facebook Business Page
+    - Apple Maps
+    - Bing Places
+
+[ ] NAP Consistency (Name, Address, Phone)
+    - EXACT same format everywhere
+    - Example: "South Haven Cottages, 1234 Street Name, Salem, OR 97302"
+
+=============================================================================
+PHASE 3: CONTENT SEO (BLOG STRATEGY)
+=============================================================================
+Add a blog to target long-tail keywords. Post 1-2x per week.
+
+HIGH-VALUE BLOG TOPICS:
+1. "What is a Pocket Neighborhood? Benefits of Community Living"
+2. "Ross Chapin's Pocket Neighborhood Philosophy Explained"
+3. "Best Parks Near South Salem: Minto-Brown Island Guide"
+4. "Downsizing to a Cottage: A Complete Guide"
+5. "Salem Oregon Housing Market 2026: What Renters Need to Know"
+6. "Cottage Living vs. Apartment Living: Pros and Cons"
+7. "Sustainable Housing in Oregon: Eco-Friendly Living Options"
+8. "Empty Nesters: Why Pocket Neighborhoods Are Perfect"
+9. "Veterans Housing Options in Salem Oregon"
+10. "Senior-Friendly Housing: Single-Level Living Alternatives"
+
+CONTENT FORMULA (from top SEO accounts):
+- Answer ONE specific question per post
+- 1,500-2,500 words minimum
+- Include images with alt text
+- Internal links to other pages
+- External links to authority sources
+- FAQ section at bottom (targets featured snippets)
+
+=============================================================================
+PHASE 4: KEYWORD TARGETS
+=============================================================================
+PRIMARY KEYWORDS (high intent):
+- pocket neighborhood Salem Oregon
+- cottages for rent Salem Oregon
+- small homes for rent South Salem
+- community living Salem OR
+
+SECONDARY KEYWORDS (awareness):
+- Ross Chapin pocket neighborhood
+- pocket neighborhood Oregon
+- cottage community Oregon
+- downsizing housing options Salem
+
+LONG-TAIL KEYWORDS (blog targets):
+- what is a pocket neighborhood
+- benefits of pocket neighborhood living
+- small cottage rentals near Minto Brown Park
+- affordable housing South Salem Oregon
+- senior cottages Salem Oregon
+- veteran housing Salem Oregon
+
+=============================================================================
+PHASE 5: LINK BUILDING STRATEGIES
+=============================================================================
+1. LOCAL PR
+   - Salem Statesman Journal feature article
+   - Salem Reporter
+   - Oregon Home Magazine
+   - Local TV news (human interest story)
+
+2. NICHE DIRECTORIES
+   - Pocket Neighborhood directory (rosschapin.com)
+   - Cohousing.org
+   - Sustainable housing directories
+
+3. PARTNERSHIPS
+   - Salem Chamber of Commerce
+   - Salem Area Realtors
+   - Local senior centers
+   - Veterans organizations
+   - Willamette University housing office
+
+4. GUEST POSTING
+   - Housing blogs
+   - Oregon lifestyle blogs
+   - Sustainability blogs
+   - Tiny home / small living blogs
+
+=============================================================================
+PHASE 6: SOCIAL PROOF & REVIEWS
+=============================================================================
+[ ] Collect testimonials from waitlist signups
+[ ] Video testimonials when residents move in
+[ ] Before/after construction content
+[ ] "Day in the life" content series
+
+REVIEW STRATEGY:
+- Ask every satisfied contact for a Google review
+- Respond to ALL reviews (good and bad)
+- Share positive reviews on social media
+
+=============================================================================
+TOOLS TO SET UP
+=============================================================================
+FREE:
+- Google Search Console (track rankings)
+- Google Analytics 4 (track traffic)
+- Google Business Profile (local SEO)
+- Bing Webmaster Tools
+
+PAID (OPTIONAL):
+- Ahrefs or SEMrush ($99-199/mo) - keyword tracking
+- Surfer SEO - content optimization
+- Jasper - AI content writing
+
+=============================================================================
+QUICK WINS (DO THIS WEEK)
+=============================================================================
+1. [ ] Create Google Business Profile
+2. [ ] Submit site to Google Search Console
+3. [ ] Add address + phone to website
+4. [ ] Create Facebook Business Page
+5. [ ] Post on local Salem Facebook groups
+6. [ ] Reach out to Salem Statesman Journal
+
+=============================================================================
+TRACKING SUCCESS
+=============================================================================
+Monthly check:
+- Google Search Console: impressions, clicks, average position
+- Google Analytics: traffic sources, time on site
+- Google Business: views, calls, direction requests
+- Waitlist signups (conversion rate)
+
+Target metrics at 6 months:
+- Ranking page 1 for "pocket neighborhood Salem Oregon"
+- 500+ monthly organic visitors
+- 50+ waitlist signups from organic search
+- 10+ Google reviews (4.5+ star average)
+
+=============================================================================
+X/TWITTER ACCOUNTS TO FOLLOW FOR SEO
+=============================================================================
+@aaborkholder - Local SEO tactics
+@JohnMu - Google Search insider
+@brodieseo - Practical SEO tips
+@aleydasolis - Technical SEO
+@NikkiHalliwell - Real estate SEO
+@MattDiGuiseppe - Content marketing
+@seaborkholder - Search marketing
